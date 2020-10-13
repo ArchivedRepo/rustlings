@@ -4,8 +4,16 @@
 // - Macros
 
 // Write a macro that passes the test! No hints this time, you can do it!
-
-// I AM NOT DONE
+#[macro_export]
+macro_rules! my_macro {
+    ($s: expr) => {
+        {
+            let mut x = String::from("Hello ");
+            x.push_str($s);
+            x.to_string()
+        }
+    };
+}
 
 #[cfg(test)]
 mod tests {
